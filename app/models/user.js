@@ -30,6 +30,9 @@ const Validations = buildValidations({
 
 
   export default Model.extend(Validations, {
+    name:    attr('string'),
+    lastname:    attr('string'),
     email:    attr('string'),
     password: attr('string'),
+
   });

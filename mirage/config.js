@@ -14,8 +14,12 @@ export default function() {
   this.get('/bands/:id/songs', function(schema, request) {
     let id = request.params.id;
     return schema.songs.where({ bandId: id });
-  }); 
-  
+  });
+
+  this.get('/users', function(schema, request) {
+    return schema.users.all();
+  });
+
   this.post('/users');
 
   this.post('/token', function(schema, request) {
